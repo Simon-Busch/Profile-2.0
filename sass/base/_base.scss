@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    font-family: 'Piazzolla', serif;
+    font-weight: 200;
+    color: $color-primary;
+    background-color: black;
+}
+
+body {
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+
+::selection {
+    // color: black;
+    // background-color: $color-selection;
+}
