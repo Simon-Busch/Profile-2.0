@@ -1,0 +1,54 @@
+.main {
+
+  &__front {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 4rem;
+  }
+
+  &__back {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 4rem;
+  }
+
+  &__other {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+  }
+}
+
+.list {
+  &__front {
+    // background-color: black;
+    // border-radius: 25rem;
+  } 
+
+  &__back {
+
+  }
+
+  &__other {
+
+  }
+}
+
+.skills__img {
+  height: 8rem;
+  width: auto;
+  // border-radius: 50px;
+  padding: 0rem 3rem 2rem 3rem;
+  transition: .5s ease;
+  filter: sepia(10);
+
+  &:hover {
+    transform: scale(1.2);
+    filter: none;
+  }
+}
