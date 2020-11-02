@@ -1,0 +1,87 @@
+.header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__social{
+
+    &--flex {
+      display:flex;
+      list-style: none;
+    }
+    
+    &--item {
+
+    }
+
+    .social__link {
+      &__link:link,
+      &__link:visited {
+          text-decoration: none;
+          font-size: 3rem;
+      }
+    }
+
+    .social__logo {
+      transition: all .7s ease;
+      font-size :5rem;
+      padding-left: 2rem;
+      padding-top: 1rem;
+
+      &--facebook {
+        color: $color-logo;
+        &:hover {
+            color:#1877f2;
+            transform: scale(1.2);
+        }
+      }
+
+      &--linkedin {
+        color: $color-logo;
+        &:hover {
+          color:#007bb5;
+          transform: scale(1.2);
+      }
+      }
+
+      &--github {
+        color: $color-logo;
+      // overflow: hidden;
+      // outline-style: none;
+      border-radius: 50px;
+        &:hover {
+          color: #333;
+          // background-color: white;
+          // border: 3px solid white;
+          transform: scale(1.2);
+        }
+      }
+
+    }
+  }
+  
+  &__presentation {
+    padding: 1rem;
+  }
+
+  &__navigation {
+    
+
+    .nav__list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .nav__item {
+      list-style: none;
+      padding-right: 3rem;
+      padding-top:2rem;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      font-size: 2rem;
+      color:white;
+    }
+  }
+}
