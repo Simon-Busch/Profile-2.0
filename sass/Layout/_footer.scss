@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  // background-color: black;
+
+  &__main {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 2rem;
+    padding:1rem;
+    bottom:0rem;
+    background-color: $color-footer;
+  }
+
+  &__item {
+
+  }
+
+  &__img {
+    height: 4rem;
+    width: auto;
+    // border-radius: 50px;
+    transition: .5s ease;
+    filter: sepia(10);
+  
+    &:hover {
+      transform: scale(1.4);
+      filter: none;
+    }
+  }
+}

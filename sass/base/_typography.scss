@@ -1,10 +1,26 @@
 .heading__primary {
-    font-size: 4.5rem;
+    font-size: 6rem;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: .6rem;
     padding-bottom: 1rem;
     color: black;
+    backface-visibility: hidden;
+    top:10rem;
+
+    &--main {
+        display:block;
+        letter-spacing:1.2rem;
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+    }
+
+    &--sub {
+        display:block;
+        font-size: 1.7rem;
+        animation-name: moveInRight;
+        animation-duration: 1.5s;
+    }
 }
 
 .heading__secondary {

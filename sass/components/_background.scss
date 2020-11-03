@@ -1,0 +1,31 @@
+.background {
+  // background-image: url(/content/profile-simonhalf.png);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position:fixed;
+  margin: 0 auto;
+  z-index: 1;
+  
+  left:37rem;
+  top: 24.4rem;
+
+  &__picture {
+    width:65rem;
+  }
+}
+
+.background2 {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position:fixed;
+  margin: 0 auto;
+  z-index: 1;
+  
+  left:20rem;
+  top: 13rem;
+  
+  &__mac {
+    width:16rem;
+    transform: rotate(-20deg);
+  }
+}
