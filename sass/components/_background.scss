@@ -3,14 +3,16 @@
   object-fit: cover;
   background-repeat: no-repeat;
   position:fixed;
-  margin: 0 auto;
+  // margin: 0 auto;
   z-index: 1;
   
   left:37rem;
-  top: 24.4rem;
+  top: 25.4rem;
+  
 
   &__picture {
     width:65rem;
+    filter:drop-shadow(.2rem .2rem .2rem black);
   }
 }
 
@@ -18,7 +20,7 @@
   object-fit: cover;
   background-repeat: no-repeat;
   position:fixed;
-  margin: 0 auto;
+  // margin: 0 auto;
   z-index: 1;
   
   left:20rem;
@@ -27,5 +29,11 @@
   &__mac {
     width:16rem;
     transform: rotate(-20deg);
+    filter:drop-shadow(.2rem .2rem .2rem black);
+    transition: all .5s ease;
+    
+    &:hover {
+      transform: rotate(-22deg);
+    }
   }
 }

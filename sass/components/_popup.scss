@@ -1,0 +1,99 @@
+.portfolio {
+  width:100%;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: rgba($color-black,.2);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .8s;
+
+  &__heading {
+      padding-top: 1rem;
+      margin:0 auto;
+  }
+
+  &__box {
+      display:flex;
+      flex-direction: column;
+      opacity: 0;
+      @include absoluteCenter;
+      background-color: $color-popup;
+      width: 70vw;
+      height: 75vh;
+      overflow: hidden;
+      transition: all 1.5s ease;
+      border-radius: 2rem;
+      transform: scale(.00001);
+  }
+
+  //open popup
+  &:target {
+      opacity: 1;
+      visibility: visible; /*the popup appears*/
+
+      
+  }
+  
+  //open popup    
+  &:target &__box { /*moment when the popup become the target*/
+      opacity: 1;
+      transform: translate(-50%,-50%) scale(1);
+  }
+
+  //close popup
+  &__close {
+      &:link,
+      &:visited {
+          color:$color-black;
+          position: absolute;
+          top: .7rem;
+          right: 1.5rem;
+          line-height: 1; /*set to 1 because the default value is heigher and create an offset*/
+          font-size: 5rem;
+          text-decoration: none;
+          display: inline-block;
+          transition: all .5s;
+      }
+
+      &:hover {
+          transform: scale(1.3);
+      }
+  }
+}
+
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, min-content));
+  grid-column-gap: 5rem;
+  grid-row-gap:5rem;
+  text-align: center;
+  padding-left:1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+
+.img {
+  &__portfolio {
+      width: 27rem;
+      height: 18rem;
+      transition: all .5s;
+      opacity: .65;
+      background-color: black;
+      overflow: hidden;
+      border-radius: 3px;
+      
+      &:hover {
+          width: 30rem;
+          height: 22rem;
+          opacity: 1;
+      }
+  }
+
+  
+}

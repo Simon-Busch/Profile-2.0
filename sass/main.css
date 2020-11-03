@@ -155,7 +155,7 @@ html {
   font-family: 'Piazzolla', serif;
   font-weight: 200;
   color: #fcf8f8;
-  background-color: #52575d;
+  background-color: #696969;
 }
 
 body {
@@ -174,6 +174,7 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   top: 10rem;
+  z-index: 2;
 }
 
 .heading__primary--main {
@@ -225,14 +226,15 @@ body {
      object-fit: cover;
   background-repeat: no-repeat;
   position: fixed;
-  margin: 0 auto;
   z-index: 1;
   left: 37rem;
-  top: 24.4rem;
+  top: 25.4rem;
 }
 
 .background__picture {
   width: 65rem;
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
 }
 
 .background2 {
@@ -240,7 +242,6 @@ body {
      object-fit: cover;
   background-repeat: no-repeat;
   position: fixed;
-  margin: 0 auto;
   z-index: 1;
   left: 20rem;
   top: 13rem;
@@ -250,6 +251,124 @@ body {
   width: 16rem;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.background2__mac:hover {
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.portfolio__heading {
+  padding-top: 1rem;
+  margin: 0 auto;
+}
+
+.portfolio__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #edc988;
+  width: 70vw;
+  height: 75vh;
+  overflow: hidden;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+  border-radius: 2rem;
+  -webkit-transform: scale(0.00001);
+          transform: scale(0.00001);
+}
+
+.portfolio:target {
+  opacity: 1;
+  visibility: visible;
+  /*the popup appears*/
+}
+
+.portfolio:target .portfolio__box {
+  /*moment when the popup become the target*/
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.portfolio__close:link, .portfolio__close:visited {
+  color: black;
+  position: absolute;
+  top: .7rem;
+  right: 1.5rem;
+  line-height: 1;
+  /*set to 1 because the default value is heigher and create an offset*/
+  font-size: 5rem;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.portfolio__close:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.portfolio__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, min-content))[3];
+      grid-template-columns: repeat(3, minmax(20rem, -webkit-min-content));
+      grid-template-columns: repeat(3, minmax(20rem, min-content));
+  grid-column-gap: 5rem;
+  grid-row-gap: 5rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+.img__portfolio {
+  width: 27rem;
+  height: 18rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: .65;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.img__portfolio:hover {
+  width: 30rem;
+  height: 22rem;
+  opacity: 1;
 }
 
 .u-center-text {
@@ -364,40 +483,39 @@ body {
 .header__social .social__logo {
   -webkit-transition: all .7s ease;
   transition: all .7s ease;
-  font-size: 5rem;
+  font-size: 3rem;
   padding-left: 7rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .header__social .social__logo--facebook {
-  color: #edc988;
+  color: black;
 }
 
 .header__social .social__logo--facebook:hover {
   color: #1877f2;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .header__social .social__logo--linkedin {
-  color: #edc988;
+  color: black;
 }
 
 .header__social .social__logo--linkedin:hover {
   color: #007bb5;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .header__social .social__logo--github {
-  color: #edc988;
-  border-radius: 50px;
+  color: black;
 }
 
 .header__social .social__logo--github:hover {
   color: #333;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .header__presentation {
@@ -417,14 +535,24 @@ body {
 
 .header__navigation .nav__item {
   list-style: none;
-  padding-right: 3rem;
   padding-top: 2rem;
+  padding-right: 3rem;
+}
+
+.header__navigation .nav__item:not(:last-child) {
+  padding-right: 5rem;
 }
 
 .header__navigation .nav__link {
   text-decoration: none;
   font-size: 2rem;
   color: black;
+  -webkit-transition: .8s ease;
+  transition: .8s ease;
+}
+
+.header__navigation .nav__link:hover {
+  font-size: 2.5rem;
 }
 
 /* Header */
@@ -489,16 +617,16 @@ body {
   margin-top: 2rem;
   padding: 1rem;
   bottom: 0rem;
-  background-color: #2a2929;
+  background-color: #171717;
 }
 
 .footer__img {
-  height: 4rem;
+  height: 3rem;
   width: auto;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  -webkit-filter: sepia(10);
-          filter: sepia(10);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .footer__img:hover {
