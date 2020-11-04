@@ -48,4 +48,12 @@
     text-align: center;
     text-transform: uppercase;
     color: black;
+
+    &__profile{
+        font-size:1.5rem;
+        color:black;
+        text-align: justify;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
