@@ -140,6 +140,42 @@
   }
 }
 
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  80% {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  80% {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -152,7 +188,7 @@
 html {
   font-size: 62.5%;
   height: 100%;
-  font-family: 'Piazzolla', serif;
+  font-family: 'Piazzolla', sans-serif;
   font-weight: 200;
   color: #fcf8f8;
   background-color: #696969;
@@ -180,17 +216,17 @@ body {
 .heading__primary--main {
   display: block;
   letter-spacing: 1.2rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
+  -webkit-animation-name: appear;
+          animation-name: appear;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
 
 .heading__primary--sub {
   display: block;
-  font-size: 1.7rem;
-  -webkit-animation-name: moveInRight;
-          animation-name: moveInRight;
+  font-size: 2.6rem;
+  -webkit-animation-name: appear;
+          animation-name: appear;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
@@ -230,44 +266,52 @@ body {
 }
 
 .background {
+  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
-  position: fixed;
-  z-index: 1;
-  left: 37rem;
-  top: 25.4rem;
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  top: 8rem;
+  left: 20rem;
 }
 
 .background__picture {
-  width: 65rem;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 68rem;
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
           filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
 }
 
-.background2 {
+.background__mac {
   -o-object-fit: cover;
      object-fit: cover;
-  background-repeat: no-repeat;
-  position: fixed;
-  z-index: 1;
-  left: 20rem;
-  top: 13rem;
-}
-
-.background2__mac {
-  width: 16rem;
+  position: absolute;
+  width: 17.5rem;
+  left: -12rem;
+  top: -10rem;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
           filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
-.background2__mac:hover {
+.background__mac:hover {
   -webkit-transform: rotate(-22deg);
           transform: rotate(-22deg);
+}
+
+.background__video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 .btn {
@@ -283,7 +327,6 @@ body {
   letter-spacing: .4rem;
   font-weight: 200;
   text-decoration: none;
-  background-color: #696969;
   color: white;
   text-transform: uppercase;
   display: inline-block;
@@ -328,8 +371,8 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -361,7 +404,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #edc988;
+  background-color: rgba(208, 208, 208, 0.4);
   width: 70vw;
   height: 75vh;
   overflow: hidden;
@@ -675,13 +718,13 @@ body {
 .header__social .social__logo {
   -webkit-transition: all .7s ease;
   transition: all .7s ease;
-  font-size: 4rem;
+  font-size: 4.5rem;
   padding-left: 7rem;
   padding-top: 1.5rem;
 }
 
 .header__social .social__logo--facebook {
-  color: black;
+  color: #dcb770;
 }
 
 .header__social .social__logo--facebook:hover {
@@ -691,18 +734,17 @@ body {
 }
 
 .header__social .social__logo--linkedin {
-  color: black;
+  color: #dcb770;
 }
 
 .header__social .social__logo--linkedin:hover {
   color: #007bb5;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-  background: white;
 }
 
 .header__social .social__logo--github {
-  color: black;
+  color: #dcb770;
 }
 
 .header__social .social__logo--github:hover {
@@ -730,6 +772,7 @@ body {
   list-style: none;
   padding-top: .5rem;
   padding-right: 1rem;
+  position: relative;
 }
 
 .header__navigation .nav__link {

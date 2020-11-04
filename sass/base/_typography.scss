@@ -12,15 +12,17 @@
     &--main {
         display:block;
         letter-spacing:1.2rem;
-        animation-name: moveInLeft;
+        animation-name: appear;
         animation-duration: 1.5s;
+        // background-color: rgba(white,.2);
     }
 
     &--sub {
         display:block;
-        font-size: 1.7rem;
-        animation-name: moveInRight;
+        font-size: 2.6rem;
+        animation-name: appear;
         animation-duration: 1.5s;
+        // background-color: rgba(white,.2);
     }
 }
 
