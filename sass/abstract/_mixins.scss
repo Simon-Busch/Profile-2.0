@@ -40,4 +40,12 @@
     @if $breakpoint == largest {
         @media only screen and (max-width:85em) { @content };/*= 1360px*/
     }
+
+    @if $breakpoint == very-largest {
+        @media only screen and (max-width:85em) { @content };/*= 1360px*/
+    }
+
+    @if $breakpoint == super-largest {
+        @media only screen and (max-width:125em) { @content };/*= 2000px*/
+    }
 }

@@ -198,14 +198,15 @@ body {
   display: block;
   position: absolute;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .heading__primary {
   font-size: 6rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .6rem;
-  padding-bottom: 1rem;
   color: black;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -220,6 +221,8 @@ body {
           animation-name: appear;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem 0 1rem;
 }
 
 .heading__primary--sub {
@@ -229,6 +232,8 @@ body {
           animation-name: appear;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 0 2rem 1rem;
 }
 
 .heading__secondary {
@@ -270,38 +275,28 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
-  width: 80%;
-  height: 50%;
-  margin: 0 auto;
-  top: 8rem;
-  left: 20rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 20rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
 }
 
 .background__picture {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 68rem;
+  width: 78%;
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
           filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
-}
-
-.background__mac {
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  width: 17.5rem;
-  left: -12rem;
-  top: -10rem;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
-          filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
-}
-
-.background__mac:hover {
-  -webkit-transform: rotate(-22deg);
-          transform: rotate(-22deg);
 }
 
 .background__video {
@@ -360,6 +355,10 @@ body {
   border-radius: 1rem;
   -webkit-box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0.5), 0 0 1rem rgba(0, 0, 0, 0.5);
           box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0.5), 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.btn-email {
+  color: black !important;
 }
 
 .portfolio,
@@ -525,7 +524,7 @@ body {
 
 .contact__box {
   width: 40vw !important;
-  height: auto !important;
+  height: 30vh !important;
 }
 
 .contact__form {
@@ -542,68 +541,9 @@ body {
           align-items: center;
 }
 
-.form__input {
-  font-family: inherit;
-  width: 20rem;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-.form__input:focus {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  outline: none;
-  width: 37rem;
-}
-
-.form__input:focus:invalid {
-  border: 2px solid red;
-}
-
-.form__label {
-  font-size: 1.5rem;
-}
-
-.textarea {
-  width: 20rem;
-  height: 5rem;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  transition: all 1s;
-  -webkit-box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-}
-
-.textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  outline: none;
-  width: 37rem;
-  height: 15rem;
-}
-
-.textarea__label {
-  font-size: 1.5rem;
-}
-
-.contact__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.content {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .u-center-text {
@@ -690,6 +630,18 @@ body {
   margin-bottom: 10rem;
 }
 
+.pd-btm-sm {
+  padding-bottom: 3rem;
+}
+
+.pd-btm-md {
+  padding-bottom: 5rem;
+}
+
+.pd-btm-lg {
+  padding-bottom: 7rem;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,6 +653,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border: 1px solid black;
 }
 
 .header__social--flex {
@@ -779,17 +732,6 @@ body {
   text-decoration: none;
   font-size: 2rem;
   color: black;
-}
-
-/* Header */
-.large-header {
-  position: relative;
-  width: 100%;
-  background: #333;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  z-index: 1;
 }
 
 .presentation {

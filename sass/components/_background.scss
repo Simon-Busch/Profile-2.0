@@ -2,39 +2,35 @@
   position:relative;
   object-fit: cover;
   background-repeat: no-repeat;
-  width:80%;
-  height:50%;
-  margin: 0 auto;
-
-
-  top: 8rem;
-  left: 20rem;
+  width:100%;
+  height:100%;
+  display:flex;
+  bottom: 20rem;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
   
   &__picture {
     position: absolute;
     object-fit: cover;
-    width:68rem;
+    // width:110rem;
+    width:78%;
     filter:drop-shadow(.2rem .2rem .2rem black);
-
-
-    // top:10rem;
-    // right: 25rem;
-    // margin: 0 auto;
   }
 
-  &__mac{
-    object-fit: cover;
-    position: absolute;
-    width:17.5rem;
-    left: -12rem;
-    top: -10rem;
-    transform: rotate(-20deg);
+  // &__mac{
+  //   object-fit: cover;
+  //   position: absolute;
+  //   width:17.5rem;
+  //   left: -12rem;
+  //   top: -10rem;
+  //   transform: rotate(-20deg);
 
-    filter:drop-shadow(.2rem .2rem .2rem black);
-    &:hover {
-      transform: rotate(-22deg);
-    }
-  }
+  //   filter:drop-shadow(.2rem .2rem .2rem black);
+  //   &:hover {
+  //     transform: rotate(-22deg);
+  //   }
+  // }
 
   &__video {
     object-fit:cover;
