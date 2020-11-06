@@ -18,20 +18,6 @@
     filter:drop-shadow(.2rem .2rem .2rem black);
   }
 
-  // &__mac{
-  //   object-fit: cover;
-  //   position: absolute;
-  //   width:17.5rem;
-  //   left: -12rem;
-  //   top: -10rem;
-  //   transform: rotate(-20deg);
-
-  //   filter:drop-shadow(.2rem .2rem .2rem black);
-  //   &:hover {
-  //     transform: rotate(-22deg);
-  //   }
-  // }
-
   &__video {
     object-fit:cover;
     width: 100%;
@@ -40,25 +26,3 @@
     filter:blur(2px);
   }
 }
-
-// .background2 {
-//   object-fit: cover;
-//   background-repeat: no-repeat;
-//   position:absolute;
-//   // margin: 0 auto;
-//   z-index: 1;
-  
-//   left:20rem;
-//   top: 13rem;
-  
-//   &__mac {
-//     width:16rem;
-//     transform: rotate(-20deg);
-//     filter:drop-shadow(.2rem .2rem .2rem black);
-//     transition: all .5s ease;
-    
-//     &:hover {
-//       transform: rotate(-22deg);
-//     }
-//   }
-// }
