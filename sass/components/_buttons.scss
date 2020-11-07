@@ -18,6 +18,10 @@
     padding: 1rem 2rem;
     transition: all 0.4s;
     cursor: pointer;
+
+    @include respond (tab-port) {
+      padding: .7rem 1rem;
+    }
   }
 
   &:active,

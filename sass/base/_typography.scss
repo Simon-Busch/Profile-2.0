@@ -8,6 +8,11 @@
     backface-visibility: hidden;
     top:10rem;
     z-index: 2;
+
+    @include respond (medium-phone) {
+        font-size: 4rem;
+        letter-spacing: .4rem;
+    }
     
 
     &--main {
@@ -56,10 +61,13 @@
     color: black;
 
     &__profile{
-        font-size:1.5rem;
+        font-size:1.7rem;
         color:black;
         text-align: justify;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding: 0 3rem 3rem 3rem;
+
+        @include respond (tab-port) {
+            font-size: 2rem;
+          }
     }
 }

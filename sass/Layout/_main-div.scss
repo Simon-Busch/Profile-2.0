@@ -6,6 +6,18 @@
   background-color: none;
   top: 3rem;
 
+  @include respond (tab-port) {
+    top: 8rem;
+  }
+
+  @include respond (phone) {
+    top: 12rem;
+  }
+
+  @include respond(hyper-small-phone) {
+    top: 15rem;
+  }
+
   &__span {
     color: black;
     text-transform: uppercase;

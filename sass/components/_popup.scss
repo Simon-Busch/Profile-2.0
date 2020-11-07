@@ -82,6 +82,10 @@
   padding-left:1rem;
   padding-right: 1rem;
   margin: 0 auto;
+
+  @include respond (tab-land) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
@@ -94,6 +98,12 @@
       background-color: black;
       overflow: hidden;
       border-radius: 3px;
+
+      @include respond (tab-land) {
+        width: 20rem;
+        height: auto;
+      }
+      
       
       &:hover {
           width: 30rem;
@@ -109,19 +119,21 @@
 
   &__box {
   width: 50vw;
-  height: 50vh;
-  }
-  &__top{
-    padding-bottom: 2rem;
-  }
+  height: auto;
 
+  @include respond (tab-port) {
+    width: 70vw;
+  }
+  
+  }
+  
   &__bottom {
     padding-top: 3rem;
   }
 }
 
 .contact-icon {
-  font-size:1.5rem;
+  font-size:1.7rem;
   color: $color-black;
 }
 
@@ -135,8 +147,8 @@
 .contact {
 
   &__box {
-    width: 40vw !important;
-    height: 30vh !important;
+    width: 60vw !important;
+    height: 45vh !important;
   }
   
   &__form {

@@ -13,6 +13,25 @@ html {
     font-weight: 200;
     color: $color-primary;
     background-color: $color-background;
+    @include respond (tab-medium) {
+        font-size: 55%;
+    }
+
+    @include respond (phone) {
+        font-size: 47%;
+    }
+
+    @include respond (medium-phone) {
+        font-size: 38%;
+    }
+
+    @include respond(super-small-phone) {
+        font-size: 32%;
+    }
+
+    @include respond(hyper-small-phone) {
+        font-size: 27%;
+    }
 }
 
 body {
