@@ -31,14 +31,14 @@
     }
 
     @include respond (phone) {
-      width: 140%;
-      right: -24rem;
+      width: 120%;
+      right: -15rem;
       bottom: 15rem;
     }
 
     @include respond (medium-phone) {
       width: 150%;
-      right: -20rem;
+      right: -25rem;
     }
   }
 

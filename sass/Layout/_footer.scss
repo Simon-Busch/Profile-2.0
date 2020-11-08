@@ -37,8 +37,10 @@
     filter: grayscale(100%);
 
     @include respond (phone) {
-      height: 5rem;
+      height: 3rem;
     }
+
+
   
     &:hover {
       transform: scale(1.4);

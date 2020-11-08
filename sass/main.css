@@ -374,8 +374,8 @@ body {
 
 @media only screen and (max-width: 41.9em) {
   .background__picture {
-    width: 140%;
-    right: -24rem;
+    width: 120%;
+    right: -15rem;
     bottom: 15rem;
   }
 }
@@ -383,7 +383,7 @@ body {
 @media only screen and (max-width: 33.75em) {
   .background__picture {
     width: 150%;
-    right: -20rem;
+    right: -25rem;
   }
 }
 
@@ -942,18 +942,32 @@ body {
   top: 3rem;
   /*= 750px*/
   /*= 660px*/
+  /*= 480*/
+  /*= 420*/
   /*= 300px*/
 }
 
 @media only screen and (max-width: 46.88em) {
   .presentation {
-    top: 8rem;
+    top: 4.5rem;
   }
 }
 
 @media only screen and (max-width: 41.9em) {
   .presentation {
-    top: 12rem;
+    top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 33.75em) {
+  .presentation {
+    top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .presentation {
+    top: 8rem;
   }
 }
 
@@ -1035,7 +1049,7 @@ body {
 
 @media only screen and (max-width: 41.9em) {
   .footer__img {
-    height: 5rem;
+    height: 3rem;
   }
 }
 

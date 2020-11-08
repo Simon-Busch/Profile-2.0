@@ -7,11 +7,19 @@
   top: 3rem;
 
   @include respond (tab-port) {
-    top: 8rem;
+    top: 4.5rem;
   }
 
   @include respond (phone) {
-    top: 12rem;
+    top: 1rem;
+  }
+
+  @include respond (medium-phone) {
+    top: 4rem;
+  }
+
+  @include respond (small-phone) {
+    top: 8rem;
   }
 
   @include respond(hyper-small-phone) {
