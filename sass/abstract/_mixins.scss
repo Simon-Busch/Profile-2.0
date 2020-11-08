@@ -5,7 +5,6 @@
     transform: translate(-50%,-50%);
 }
 
-
 @mixin respond($breakpoint) {
 
     @if $breakpoint == hyper-small-phone {
