@@ -329,7 +329,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 20rem;
+  bottom: 17rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -337,6 +337,13 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   overflow: hidden;
+  /*= 480*/
+}
+
+@media only screen and (max-width: 33.75em) {
+  .background {
+    bottom: 13rem;
+  }
 }
 
 .background__picture {
