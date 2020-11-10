@@ -114,17 +114,14 @@
 }
 
 // About section 
-
 .about{
 
   &__box {
   width: 50vw;
   height: auto;
-
-  @include respond (tab-port) {
-    width: 70vw;
-  }
-  
+    @include respond (tab-port) {
+      width: 70vw;
+    }
   }
   
   &__bottom {

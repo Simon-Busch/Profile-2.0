@@ -3,7 +3,6 @@
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: .6rem;
-    // padding-bottom: 1rem;
     color: black;
     backface-visibility: hidden;
     top:10rem;
@@ -22,7 +21,6 @@
         animation-duration: 1.5s;
         background-color: rgba(white,.2);
         padding: 1rem 2rem 0 1rem;
-        
     }
 
     &--sub {
@@ -68,6 +66,6 @@
 
         @include respond (tab-port) {
             font-size: 2rem;
-          }
+        }
     }
 }
