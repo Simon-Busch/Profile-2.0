@@ -17,9 +17,7 @@ const shadow = (e) => {
 
   text.style.textShadow = `
     ${xWalk}px ${yWalk}px 0 rgba(0,0,0,.3)
-
     `;
-
 }
 
 // presentation.addEventListener('mousemove', shadow)
