@@ -9,6 +9,7 @@
   "author": "Simon Busch",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "typed.js": "^2.0.11"
   }
 }
