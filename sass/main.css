@@ -313,6 +313,11 @@ body {
   /*= 750px*/
 }
 
+.paragraph__profile span {
+  color: #F39233;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 46.88em) {
   .paragraph__profile {
     font-size: 2rem;
@@ -351,6 +356,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   width: 78%;
+  z-index: 3;
   -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
           filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
   /*= 1020px*/
@@ -591,8 +597,8 @@ body {
 }
 
 .img__portfolio {
-  width: 27rem;
-  height: 18rem;
+  width: 16rem;
+  height: 13erem;
   -webkit-transition: all .5s;
   transition: all .5s;
   opacity: .65;
@@ -854,7 +860,7 @@ body {
 }
 
 .header__social .social__logo--facebook {
-  color: #dcb770;
+  color: #F39233;
 }
 
 .header__social .social__logo--facebook:hover {
@@ -864,7 +870,7 @@ body {
 }
 
 .header__social .social__logo--linkedin {
-  color: #dcb770;
+  color: #F39233;
 }
 
 .header__social .social__logo--linkedin:hover {
@@ -874,7 +880,7 @@ body {
 }
 
 .header__social .social__logo--github {
-  color: #dcb770;
+  color: #F39233;
 }
 
 .header__social .social__logo--github:hover {
