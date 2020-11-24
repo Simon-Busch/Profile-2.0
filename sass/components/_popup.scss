@@ -1,9 +1,3 @@
-.popup {
-  // width: 100vw;
-  // height: 100vw;
-  // position:absolute;
-}
-
 .portfolio,
 .about,
 .contact {
@@ -93,7 +87,7 @@
   &__portfolio {
       width: 16rem;
       height: 13erem;
-      transition: all .5s;
+      transition: all 1s;
       opacity: .65;
       background-color: black;
       overflow: hidden;
@@ -106,8 +100,8 @@
       
       
       &:hover {
-          width: 30rem;
-          height: 22rem;
+          width: 20rem;
+          height: 17rem;
           opacity: 1;
       }
   }
