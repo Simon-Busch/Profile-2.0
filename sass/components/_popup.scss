@@ -101,7 +101,6 @@
       
       &:hover {
           width: 20rem;
-          height: 17rem;
           opacity: 1;
       }
   }
@@ -152,4 +151,10 @@
 .content {
   margin: 0 auto;
   text-align: center;
+}
+
+.world_travel {
+  text-decoration: none;
+  color: $color-logo;
+  font-size: 2.5rem;
 }
