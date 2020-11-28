@@ -512,7 +512,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: rgba(208, 208, 208, 0.4);
-  width: 70vw;
+  width: 85vw;
   height: 75vh;
   overflow: hidden;
   -webkit-transition: all 1.5s ease;
@@ -520,6 +520,16 @@ body {
   border-radius: 2rem;
   -webkit-transform: scale(0.00001);
           transform: scale(0.00001);
+  /*= 360px*/
+}
+
+@media only screen and (max-width: 22.5em) {
+  .portfolio__box,
+  .about__box,
+  .contact__box {
+    height: auto;
+    padding-bottom: 2rem;
+  }
 }
 
 .portfolio:target,
@@ -583,13 +593,13 @@ body {
   grid-column-gap: 5rem;
   grid-row-gap: 5rem;
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin: 0 auto;
-  /*= 1020px*/
+  /*= 420*/
 }
 
-@media only screen and (max-width: 63.75em) {
+@media only screen and (max-width: 26.25em) {
   .portfolio__grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -621,14 +631,13 @@ body {
 }
 
 .about__box {
-  width: 50vw;
   height: auto;
-  /*= 750px*/
+  /*= 420*/
 }
 
-@media only screen and (max-width: 46.88em) {
+@media only screen and (max-width: 26.25em) {
   .about__box {
-    width: 70vw;
+    width: 90vw !important;
   }
 }
 
@@ -650,7 +659,15 @@ body {
 
 .contact__box {
   width: 50vw !important;
-  height: 45vh !important;
+  height: 50vh !important;
+  /*= 420*/
+}
+
+@media only screen and (max-width: 26.25em) {
+  .contact__box {
+    width: 60vw !important;
+    height: 40vh !important;
+  }
 }
 
 .contact__form {

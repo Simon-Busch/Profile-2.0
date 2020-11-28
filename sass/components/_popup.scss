@@ -25,12 +25,16 @@
       opacity: 0;
       @include absoluteCenter;
       background-color: rgba($color-popup,.4);
-      width: 70vw;
+      width: 85vw;
       height: 75vh;
       overflow: hidden;
       transition: all 1.5s ease;
       border-radius: 2rem;
       transform: scale(.00001);
+      @include respond (super-small-phone) {
+        height: auto;
+        padding-bottom:2rem;
+      }
   }
 
   //open popup
@@ -66,22 +70,20 @@
   }
 }
 
-
+// Portfolio section
 .portfolio__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(20rem, min-content));
   grid-column-gap: 5rem;
   grid-row-gap:5rem;
   text-align: center;
-  padding-left:1rem;
-  padding-right: 1rem;
+  padding-left:2rem;
+  padding-right: 2rem;
   margin: 0 auto;
-
-  @include respond (tab-land) {
+  @include respond (small-phone) {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 
 .img {
   &__portfolio {
@@ -98,7 +100,6 @@
         height: auto;
       }
       
-      
       &:hover {
           width: 20rem;
           opacity: 1;
@@ -110,10 +111,11 @@
 .about{
 
   &__box {
-  width: 50vw;
   height: auto;
-    @include respond (tab-port) {
-      width: 70vw;
+
+    @include respond (small-phone) {
+      // height: 85vh!important;
+      width: 90vw!important;
     }
   }
   
@@ -137,7 +139,11 @@
 .contact {
   &__box {
     width: 50vw !important;
-    height: 45vh !important;
+    height: 50vh !important;
+    @include respond (small-phone) {
+      width: 60vw !important;
+      height: 40vh !important;
+    }
   }
   
   &__form {
